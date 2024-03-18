@@ -30,7 +30,7 @@ int main()
         Node *temp = q.front();
         q.pop();
 
-        cout << " enter the left node data" << endl;
+        cout << " enter the left node data " << temp->data << endl;
         cin >> first;
 
         if (first != -1)
@@ -39,7 +39,7 @@ int main()
             q.push(temp->left);
         }
 
-        cout << " enter the right node data" << endl;
+        cout << " enter the right node data" << temp->data << endl;
 
         cin >> second;
         if (second != -1)
