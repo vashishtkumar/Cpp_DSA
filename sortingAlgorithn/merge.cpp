@@ -106,7 +106,7 @@ void merge(vector<int> &arr, int left, int mid, int right)
         {
             arr[merge++] = rightarr[sub2++];
         }
-    }
+    }  
 
     // Copy remaining elements
     while (sub1 < size1)
@@ -133,7 +133,7 @@ void mergeSort(vector<int> &arr, int left, int right)
 
 int main()
 {
-    vector<int> arr = {23, 78, 89, 45, 0, -89, 367, 200, 52, 12};
+    vector<int> arr = {1,3,5,7,2,4,9};
 
     mergeSort(arr, 0, arr.size() - 1); // Adjust right index for vector size
 
