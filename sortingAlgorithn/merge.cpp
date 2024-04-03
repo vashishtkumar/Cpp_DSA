@@ -81,7 +81,7 @@ int main()
 #include <algorithm>
 
 using namespace std;
-
+int mycount = 0;
 void merge(vector<int> &arr, int left, int mid, int right)
 {
     int size1 = mid - left + 1;
@@ -101,12 +101,14 @@ void merge(vector<int> &arr, int left, int mid, int right)
         if (leftarr[sub1] <= rightarr[sub2])
         {
             arr[merge++] = leftarr[sub1++];
+            mycount++;
         }
         else
         {
             arr[merge++] = rightarr[sub2++];
+            mycount++;
         }
-    }  
+    }
 
     // Copy remaining elements
     while (sub1 < size1)
@@ -133,15 +135,17 @@ void mergeSort(vector<int> &arr, int left, int right)
 
 int main()
 {
-    vector<int> arr = {1,3,5,7,2,4,9};
-
-    mergeSort(arr, 0, arr.size() - 1); // Adjust right index for vector size
+    vector<int> arr = {2, 4, 1, 3, 5};
+    mycount = 0;
+    mergeSort(arr, 0, arr.size() - 1); 
 
     for (int i : arr)
     {
         cout << i << " ";
     }
     cout << endl;
+
+    cout << " the count is " << mycount;
 
     return 0;
 }
